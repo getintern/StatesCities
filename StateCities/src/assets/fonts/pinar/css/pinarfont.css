@@ -1,0 +1,8 @@
+﻿@font-face {
+  font-family: "pinar";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/woff2/Pinar-DS1.woff2") format("woff2"),
+    url("../font/woff/Pinar-DS1.woff") format("woff"),
+    url("../font/ttf/Pinar.ttf") format("truetype");
+}
