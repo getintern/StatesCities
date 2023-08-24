@@ -1,0 +1,93 @@
+@import url(../assets/fonts/iransans/css/fontiran.css);
+@import url(../assets/fonts/pinar/css/pinarfont.css);
+
+body {
+  background-color: #ededed !important;
+}
+.subText {
+  color: rgb(148 163 184);
+}
+
+.greenText {
+  color: #0d363d;
+}
+
+.headingText {
+  margin-top: 8px;
+  font-size: 60px !important;
+}
+
+.BoxWrapper {
+  padding: 100px 0 90px 0;
+}
+.footer-wrapper {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #0d363d !important;
+  color: #fff;
+}
+.iconsFooter {
+  margin: 0 5px;
+}
+.itemFooter {
+  padding: 8px 5px;
+  opacity: 0.5;
+  transition: opacity 0.4ms ease, transform 0.4ms ease-in-out;
+}
+.itemFooter:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+[data-theme="light"] .subText {
+  color: rgb(77, 87, 105);
+}
+[data-theme="dark"] .greenText {
+  color: #2598ad;
+}
+[data-theme="dark"] body {
+  background-color: #1b1b1b !important;
+}
+
+.card {
+  border-radius: 13px !important;
+  min-width: 500px !important;
+}
+.headerCard {
+  /* width: 400px; */
+  background-color: #0d363d;
+  padding: 8px 20px !important;
+  border-top-right-radius: 13px;
+  border-top-left-radius: 13px;
+}
+
+.iconCopy {
+  color: rgb(1, 159, 1);
+}
+.liveModeCode {
+  background: none !important;
+}
+
+.preTag {
+  white-space: pre-line !important;
+}
+
+.btnSHowState {
+  display: block !important;
+  margin-right: auto !important;
+}
+
+.codeStyle {
+  display: unset !important ;
+  color: #d4d4d4;
+  font-size: 13px;
+  text-shadow: none;
+  direction: ltr;
+  text-align: left;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  hyphens: none;
+  overflow: auto;
+}
