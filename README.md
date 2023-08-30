@@ -2,7 +2,7 @@
 با درخواست به این API شما می توانید لیست تمام استان ها و مرکزاستان را دریافت کنید
 
 ```sh
-https://my-0x0f.iran.liara.run/api/v1/states
+https://getfreejson.iran.liara.run/api/v1/states
 
 ```
 
@@ -14,6 +14,7 @@ https://my-0x0f.iran.liara.run/api/v1/states
   longitude: 48.410
   id: 12
 },
+{}, ...
 
 <br>
 
@@ -21,7 +22,7 @@ _______
 با درخواست به این API شما می توانید لیست تمام شهرهای استان مورد نظر را دریافت کنید
 
 ```sh
-https://my-0x0f.iran.liara.run/api/v1/cities?state=خوزستان
+https://getfreejson.iran.liara.run/api/v1/cities?state=خوزستان
 
 ```
 >Response => 
@@ -34,7 +35,7 @@ ___________
 
 ```sh
 
-https://my-0x0f.iran.liara.run/api/v1/phoneCode?state=کرمان
+https://getfreejson.iran.liara.run/api/v1/phoneCode?state=کرمان
 
 ```
 
@@ -49,7 +50,7 @@ ________
 
 ```sh
 
-https://my-0x0f.iran.liara.run/api/v1/timeZones?country=iran
+https://getfreejson.iran.liara.run/api/v1/timeZones?country=iran
 
 ```
 
@@ -59,7 +60,7 @@ https://my-0x0f.iran.liara.run/api/v1/timeZones?country=iran
 
 | Query | Api |
 | ------ | ------ |
-| Brazil | https://my-0x0f.iran.liara.run/api/v1/timeZones?country=Brazil |
+| Brazil | https://getfreejson.iran.liara.run/api/v1/timeZones?country=Brazil |
 
 >response =>
 {
@@ -83,7 +84,7 @@ https://my-0x0f.iran.liara.run/api/v1/timeZones?country=iran
 
 ```sh
 
-https://my-0x0f.iran.liara.run/api/v1/getalluni
+https://getfreejson.iran.liara.run/api/v1/getalluni
 
 ```
 
