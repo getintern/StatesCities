@@ -5,33 +5,36 @@ import {
   CardBody,
   CardHeader,
   Divider,
-  Code,
+  CircularProgress,
   Text,
   Tooltip,
   UnorderedList,
 } from "@chakra-ui/react";
 import axios from "axios";
 // import styled from "./EndPoint.module.css";
-import { useEffect, useState } from "react";
-import { Clipboard, Clipboard2Check } from "react-bootstrap-icons";
+import { useState } from "react";
+import { Clipboard2CheckFill, Clipboard2Fill } from "react-bootstrap-icons";
 
 const EndPointTimeZone = ({ endPoint }) => {
   const [isCopied, setIsCopied] = useState(false);
   const [state, setState] = useState();
   const [showExample, setShowExample] = useState(false);
+  const [loading, setLoading] = useState();
 
-  useEffect(() => {
-    const fetchStateData = async () => {
-      try {
-        const response = await axios.get(endPoint);
-        console.log(response);
-        await setState(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchStateData();
-  }, []);
+  // TODO Send Request to APi button
+  const sendRequest = async () => {
+    await setLoading(true);
+    try {
+      const response = await axios.get(endPoint);
+      console.log(response);
+
+      await setState(response.data);
+      await setShowExample(true);
+      await setLoading(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const copyText = () => {
     const tempInput = document.createElement("textarea");
@@ -53,65 +56,83 @@ const EndPointTimeZone = ({ endPoint }) => {
   };
 
   return (
-    <Card className="card">
+    <Card className="cardOfExample">
       <CardHeader
-        className="headerCard"
+        className="headerCardOfExample"
         display="flex"
         justifyContent="space-between"
       >
-        <Text fontSize={15} fontWeight="bold">
-          مسیر لینک
+        <Text className="textApi" fontSize={15} fontWeight="bold">
+          Api
         </Text>
         {isCopied ? (
           <Tooltip
+            hasArrow
             label="کپی شد!"
             defaultIsOpen
             closeDelay={900}
-            placement="top"
+            placement="left"
           >
-            <button onClick={copyText}>
+            <Button onClick={copyText}>
               {isCopied ? (
-                <Clipboard2Check className="iconCopy" />
+                <Clipboard2CheckFill className="iconCopy" />
               ) : (
-                <Clipboard />
+                <Clipboard2Fill />
               )}
-            </button>
+            </Button>
           </Tooltip>
         ) : (
-          <button onClick={copyText}>
-            {isCopied ? (
-              <Clipboard2Check className="iconCopy" />
-            ) : (
-              <Clipboard />
-            )}
-          </button>
+          <Tooltip label="کپی" placement="top">
+            <Button onClick={copyText}>
+              {isCopied ? (
+                <Clipboard2CheckFill className="iconCopy" />
+              ) : (
+                <Clipboard2Fill />
+              )}
+            </Button>
+          </Tooltip>
         )}
       </CardHeader>
       <CardBody textAlign="left">
-        <Text>{endPoint}</Text>
+        <Text className="endPointShow">{endPoint}</Text>
         <Divider type="dashed" py={2} />
         <UnorderedList
           my={5}
           display={showExample ? "block" : "none"}
           listStyleType="none"
         >
-          <pre>
-            <Code className="codeStyle">
-              {`
-                {TimeZone:${state?.TimeZone}\n
-                Capital:${state?.Capital}, \n
-                DialCode:${state?.DialCode}\n,}
-                `}
-            </Code>
+          <pre className="preCode">
+            {state && (
+              <pre className="preCode">
+                {`{
+                TimeZone:${state.TimeZone}
+                Capital:${state.Capital}, 
+                DialCode:${state.DialCode},
+            
+                  },
+                  {},
+                  {},...
+                  `}
+              </pre>
+            )}
           </pre>
         </UnorderedList>
         <Divider />
         <Button
+          isLoading={
+            loading && (
+              <CircularProgress
+                className="spinner"
+                isIndeterminate
+                color="green.300"
+              />
+            )
+          }
           className="btnSHowState"
-          onClick={() => setShowExample(true)}
+          onClick={sendRequest}
           mt={4}
         >
-          نمایش جواب
+          ارسال درخواست
         </Button>
       </CardBody>
     </Card>
