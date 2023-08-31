@@ -106,21 +106,21 @@ const Homepage = () => {
 
               <TabPanels>
                 <TabPanel>
-                  <EndPointState endPoint="https://getfreejson.iran.liara.run/api/v1/states" />
+                  <EndPointState endPoint="https://api.getfreejson.ir/api/v1/states" />
                 </TabPanel>
                 <TabPanel className="tabpanels">
                   <ExampleOfLang
                     language="javascript"
                     code={`const [state, setState]=useState([]) 
 const response = await axios
-      .get("https://getfreejson.iran.liara.run/api/v1/states");
+      .get("https://api.getfreejson.ir/api/v1/states");
 setState(response.data); `}
                   />
                 </TabPanel>
                 <TabPanel className="tabpanels">
                   <ExampleOfLang
                     language="javascript"
-                    code={`fetch('https://getfreejson.iran.liara.run/api/v1/states')
+                    code={`fetch('https://api.getfreejson.ir/api/v1/states')
             .then(response => response.json())
             .then(json => console.log(json)); `}
                   />
@@ -129,7 +129,7 @@ setState(response.data); `}
                   <ExampleOfLang
                     language="php"
                     code={`$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://getfreejson.iran.liara.run/api/v1/states");
+curl_setopt($ch, CURLOPT_URL, "https://api.getfreejson.ir/api/v1/states");
 
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, POST DATA);
@@ -142,7 +142,7 @@ curl_close($ch); `}
                   <ExampleOfLang
                     language="python"
                     code={`import requests
-response = requests.get("https://getfreejson.iran.liara.run/api/v1/states")
+response = requests.get("https://api.getfreejson.ir/api/v1/states")
 data = response.json() `}
                   />
                 </TabPanel>
@@ -151,7 +151,7 @@ data = response.json() `}
                     language="java"
                     code={`HttpClient httpClient = HttpClient.newBuilder().build();
 
-                    URI uri = URI.create("https://getfreejson.iran.liara.run/api/v1/states");
+                    URI uri = URI.create("https://api.getfreejson.ir/api/v1/states");
 
 HttpRequest httpRequest = HttpRequest.newBuilder().GET().uri(uri).build();
 
@@ -176,7 +176,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
               <strong>لیست تمام شهرهای</strong> استان مورد نظر را دریافت کنید
             </Text>
 
-            <EndpointCities endPoint="https://getfreejson.iran.liara.run/api/v1/cities?state=خوزستان" />
+            <EndpointCities endPoint="https://api.getfreejson.ir/api/v1/cities?state=خوزستان" />
           </Flex>
         </Box>
         {/* //TODO: ==========API Of PhoneCode======== */}
@@ -192,7 +192,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
               با درخواست به این API شما می توانید
               <strong> کد تلفن استان </strong>مورد نظر را دریافت کنید
             </Text>
-            <EndPointPhone endPoint="https://getfreejson.iran.liara.run/api/v1/phoneCode?state=کرمان" />
+            <EndPointPhone endPoint="https://api.getfreejson.ir/api/v1/phoneCode?state=کرمان" />
           </Flex>
         </Box>
         {/* //TODO: ==========API Of TimeZones======== */}
@@ -209,7 +209,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
               <strong>ساعت محلی و پایتخت و کد تلفن</strong>
               کشور مورد نظر را دریافت کنید
             </Text>
-            <EndPointTimeZone endPoint="https://getfreejson.iran.liara.run/api/v1/timeZones?country=iran" />
+            <EndPointTimeZone endPoint="https://api.getfreejson.ir/api/v1/timeZones?country=iran" />
           </Flex>
           <Alert flexDirection={{ base: "column", md: "row" }} status="error">
             <AlertIcon />
@@ -222,7 +222,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
         </Box>
 
         <Box>
-          <ExampleOfCountry endPoint="https://getfreejson.iran.liara.run/api/v1/timeZones?country=Brazil" />
+          <ExampleOfCountry endPoint="https://api.getfreejson.ir/api/v1/timeZones?country=Brazil" />
         </Box>
         {/* //TODO: ==========API Of university======== */}
 
@@ -240,7 +240,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
               دانشگاه موردنظر را دریافت کنید
             </Text>
 
-            <EndPointUni endPoint="https://getfreejson.iran.liara.run/api/v1/getalluni" />
+            <EndPointUni endPoint="https://api.getfreejson.ir/api/v1/getalluni" />
           </Flex>
         </Box>
 
@@ -260,7 +260,7 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
               دانشگاه موردنظر را دریافت کنید
             </Text>
 
-            <EndPointWeather endPoint="https://getfreejson.iran.liara.run/api/v1/getweather?city=tehran" />
+            <EndPointWeather endPoint="https://api.getfreejson.ir/api/v1/getweather?city=tehran" />
           </Flex>
         </Box>
 
