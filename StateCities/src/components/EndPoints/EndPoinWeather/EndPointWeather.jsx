@@ -26,6 +26,8 @@ const EndPointWeather = ({ endPoint }) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
+      console.log(response);
+
       await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
@@ -103,7 +105,15 @@ const EndPointWeather = ({ endPoint }) => {
                 <pre className="uni">
                   {`{
   weatherIconsURL: ${state.weatherIconsURL}
-  weatherMessage: ${state.weatherMessage}
+  weatherTemperature:${state.weatherTemperature}
+  weatherLocation: {
+    country:${state.weatherLocation.country}
+    lat:${state.weatherLocation.lat}
+    lon:${state.weatherLocation.lon}
+    name:${state.weatherLocation.name}
+    region:${state.weatherLocation.region}
+    timezone_id:${state.weatherLocation.timezone_id}
+  }
 }`}
                 </pre>
               )}
