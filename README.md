@@ -106,6 +106,7 @@ https://getfreejson.iran.liara.run/api/v1/getweather?city=tehran
 >Response => 
 {
   weatherIconsURL: URL Weather Icon: https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png
+>
   weatherMessage: Weather in tehran: 28℃
 }
 
