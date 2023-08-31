@@ -95,4 +95,21 @@ https://getfreejson.iran.liara.run/api/v1/getalluni
     establishedYear:1386 ,
     ,id:15 
     }
-    
+
+    _______
+با درخواست به API شما می توانید بهدما شهر یا کشور و آیکونمربوطه دسترسی داشته باشیدد
+
+```sh
+https://getfreejson.iran.liara.run/api/v1/getweather?city=tehran
+
+```
+>Response => 
+{
+  weatherIconsURL: URL Weather Icon: https://cdn.worldweatheronline.com/images/wsymbols01_png_64/wsymbol_0002_sunny_intervals.png
+  weatherMessage: Weather in tehran: 28℃
+}
+
+<br>
+
+___________
+
