@@ -1,0 +1,214 @@
+@import url(../assets/fonts/iransans/css/fontiran.css);
+@import url(../assets/fonts/pinar/css/pinarfont.css);
+
+.subText {
+  color: rgb(148 163 184);
+  font-family: "IRANSans" !important;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+
+.section {
+  transition: 0.3s all ease-out;
+  margin: 50px 0;
+  /* padding: 40px 0; */
+}
+
+.innerCard {
+  padding: 20px 10px;
+}
+
+.firstSection {
+  margin-top: -8px;
+}
+
+.endPointShow {
+  direction: ltr !important;
+}
+
+.cardOfExample {
+  width: 480px;
+  border-radius: 20px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .cardOfExample {
+    width: unset !important;
+  }
+.subText{
+  text-align: center;
+}
+}
+
+.liveExample {
+  margin: 0 auto 60px;
+}
+
+.headerCardOfExample {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #0d363d !important;
+  padding: 10px 15px !important;
+}
+
+.LiveExampleHeader {
+  justify-content: center !important;
+  background-color: #17626f !important;
+}
+
+.textHeader {
+  padding-top: 11px;
+  color: rgb(148 163 184);
+}
+
+.spinner {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.btnCopy {
+  height: 34px !important;
+}
+.divider {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+
+[data-theme="light"] .divider .css-svjswr {
+  border-color: rgb(158, 158, 158) !important;
+}
+[data-theme="dark"] .divider .css-svjswr {
+  border-color: rgb(245, 234, 81) !important;
+}
+
+.css-7pbjmx {
+  padding-top: 0px !important;
+  margin-top: -7px;
+}
+.css-kifvyh {
+  width: 120px !important;
+  background-color: #202020;
+  font-weight: 800;
+  text-align: center;
+  right: 30% !important;
+  top: 0 !important;
+}
+
+.uni .css-kifvyh{
+  width: 140px !important;
+
+}
+
+@media screen and (max-width: 768px) {
+  .css-kifvyh {
+    width: 120px !important;
+    right: 15% !important;
+  }
+  .uni .css-kifvyh{
+    width: 140px !important;
+    right: 7% !important;
+  }
+}
+
+.preCode {
+  text-align: left;
+  direction: ltr;
+  white-space: pre-line;
+}
+.sectionText {
+  max-width: 400px;
+  line-height: 2.2;
+}
+strong {
+  padding: 0 3px;
+}
+
+.textApi {
+  margin-top: 11px;
+}
+
+[data-theme="light"] .subText {
+  color: rgb(77, 87, 105);
+}
+[data-theme="light"] .css-kifvyh {
+  background-color: rgb(245, 245, 245);
+}
+
+[data-theme="light"] .textApi {
+  color: #fff;
+}
+
+/* Add a class to blur the page */
+/* .blur {
+  filter: blur(5px);
+} */
+
+/* Style the target element when focused */
+/* .target-focused {
+  background-color: red;
+} */
+
+.tabs {
+  max-width: 550px;
+}
+.tabpanels {
+  background-color: rgba(53, 52, 52, 0.504);
+}
+
+.tabpanels pre {
+  padding: 0;
+  color: #d4d4d4;
+  font-size: 13px;
+  text-shadow: none;
+  font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono",
+    "Courier New", monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  /* background: #1e1e1e; */
+}
+
+.fKOGBP {
+  text-align: left !important;
+}
+
+/* Add a class to blur sections */
+.blur-section {
+  transition: background-color 0.3s ease-out;
+  scroll-behavior: smooth;
+  background-color: rgb(70, 70, 70);
+  border-radius: 5px;
+}
+
+[data-theme="light"] .blur-section {
+  background-color: rgb(33, 33, 33);
+}
+
+[data-theme="light"] .blur-section > * {
+  background-color: rgb(33, 33, 33);
+  color: #fff !important;
+}
+
+::placeholder {
+  direction: rtl !important;
+  text-align: right !important;
+}
+
+.preCode .uni{
+  overflow: scroll;
+}

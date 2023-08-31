@@ -1,8 +1,8 @@
 .container {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px;
+  margin: -7px auto;
+  padding: 0 30px 100px;
   display: flex;
   gap: 40px;
   flex-flow: column nowrap;
@@ -12,10 +12,23 @@
 
 .row {
   display: flex;
-  flex-flow: row wrap;
+  /* flex-flow: row wrap; */
   justify-content: center;
   gap: 40px;
 }
+
+@media screen and (min-width:568px) and (max-width:768px){
+  .row{   
+     flex-flow: unset;
+    }
+  }
+
+  @media screen and  (max-width:678px){
+  .row{   
+  flex-flow: row wrap;
+    }
+  }
+
 
 .card {
   display: flex;
@@ -28,6 +41,8 @@
   z-index: 1;
   box-shadow: 6px 28px 46px -6px #000;
 }
+
+
 
 .card::before {
   content: "";
@@ -71,10 +86,10 @@
   line-height: 28px;
   font-size: 17px;
   font-weight: 500;
-  display: -webkit-box;
+  /* display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .card .info .btn {
@@ -183,4 +198,23 @@
   100% {
     transform: translate(-50%, -50%) rotate(415deg);
   }
+}
+
+@media screen and (max-width:800px) {
+
+  .card{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .card .info .title{
+    text-align: center;
+  }
+  .card .info {
+
+align-items: center;
+  }
+  .card .info .btn{
+    margin-right: unset;
+  }
+  
 }

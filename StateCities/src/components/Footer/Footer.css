@@ -1,0 +1,49 @@
+.footer-wrapper {
+  background-color: #0d363d !important;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #f8f8f8d2;
+  padding: 13px 10px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-wrapper {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+}
+
+.textFooter {
+  line-height: 2;
+}
+
+.itemFooter {
+  transition: transform 0.2s ease-in-out;
+  padding: 8px 5px;
+  opacity: 0.5;
+}
+.itemFooter:hover {
+  opacity: 1;
+  transform: translateY(-8px);
+}
+
+.iconCoffee {
+  margin: 0 5px;
+}
+.buyMeCoffeBtn {
+  padding: 0 !important;
+  margin: 30px auto !important;
+}
+.buyMeCoffee {
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.buyMeCoffee:hover {
+  text-decoration: none !important;
+}
+
+.iconsFooter{
+  margin: 0 5px;
+}

@@ -16,7 +16,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Clipboard2CheckFill, Clipboard2Fill } from "react-bootstrap-icons";
 
-const EndPointPhone = ({ endPoint }) => {
+const EndPointUni = ({ endPoint }) => {
   const [isCopied, setIsCopied] = useState(false);
   const [state, setState] = useState();
   const [showExample, setShowExample] = useState(false);
@@ -26,9 +26,7 @@ const EndPointPhone = ({ endPoint }) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
-      console.log(response);
-
-      await setState(response.data.phone);
+      await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
@@ -102,12 +100,16 @@ const EndPointPhone = ({ endPoint }) => {
           <ListItem>
             <pre className="preCode">
               {state &&
-                state?.map(state => (
-                  <pre key={state.id}>
-                    {`phone:{
-  code: ${state.code}
-  id: ${state.id}
-}`}
+                state?.slice(14, 15).map(state => (
+                  <pre className="preCode" key={state.id}>
+                    {`{
+                      name:${state.name}
+                      city:${state.city}
+                      establishedYear:${state.establishedYear}
+                      id:${state.id}
+                  },
+                  {},
+                  {},...`}
                   </pre>
                 ))}
             </pre>
@@ -135,4 +137,4 @@ const EndPointPhone = ({ endPoint }) => {
   );
 };
 
-export default EndPointPhone;
+export default EndPointUni;

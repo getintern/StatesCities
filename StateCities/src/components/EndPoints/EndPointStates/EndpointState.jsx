@@ -1,22 +1,21 @@
-/* eslint-disable react/prop-types */
+import { useEffect, useState } from "react";
 import {
   Button,
   Card,
   CardBody,
   CardHeader,
+  CircularProgress,
   Divider,
   ListItem,
-  CircularProgress,
   Text,
   Tooltip,
   UnorderedList,
 } from "@chakra-ui/react";
 import axios from "axios";
-// import styled from "./EndPoint.module.css";
-import { useState } from "react";
 import { Clipboard2CheckFill, Clipboard2Fill } from "react-bootstrap-icons";
 
-const EndPointPhone = ({ endPoint }) => {
+/* eslint-disable react/prop-types */
+const EndPointState = ({ endPoint }) => {
   const [isCopied, setIsCopied] = useState(false);
   const [state, setState] = useState();
   const [showExample, setShowExample] = useState(false);
@@ -26,9 +25,7 @@ const EndPointPhone = ({ endPoint }) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
-      console.log(response);
-
-      await setState(response.data.phone);
+      await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
@@ -54,6 +51,7 @@ const EndPointPhone = ({ endPoint }) => {
       setIsCopied(false);
     }, 5000); // Remove "Copied!" after 10 seconds
   };
+
   return (
     <Card className="cardOfExample">
       <CardHeader
@@ -92,7 +90,7 @@ const EndPointPhone = ({ endPoint }) => {
         )}
       </CardHeader>
       <CardBody textAlign="left">
-        <Text className="endPointShow">{endPoint}</Text>
+        <Text>{endPoint}</Text>
         <Divider type="dashed" py={2} />
         <UnorderedList
           my={5}
@@ -102,12 +100,18 @@ const EndPointPhone = ({ endPoint }) => {
           <ListItem>
             <pre className="preCode">
               {state &&
-                state?.map(state => (
+                state?.slice(12, 13).map(state => (
                   <pre key={state.id}>
-                    {`phone:{
-  code: ${state.code}
+                    {`{
+  name: ${state.name}
+  center: ${state.center}
+  latitude: ${state.latitude}
+  longitude: ${state.longitude}
   id: ${state.id}
-}`}
+},
+{},
+{},
+...`}
                   </pre>
                 ))}
             </pre>
@@ -135,4 +139,4 @@ const EndPointPhone = ({ endPoint }) => {
   );
 };
 
-export default EndPointPhone;
+export default EndPointState;

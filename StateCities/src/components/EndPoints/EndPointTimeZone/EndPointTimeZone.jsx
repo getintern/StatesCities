@@ -5,7 +5,6 @@ import {
   CardBody,
   CardHeader,
   Divider,
-  ListItem,
   CircularProgress,
   Text,
   Tooltip,
@@ -16,19 +15,20 @@ import axios from "axios";
 import { useState } from "react";
 import { Clipboard2CheckFill, Clipboard2Fill } from "react-bootstrap-icons";
 
-const EndPointPhone = ({ endPoint }) => {
+const EndPointTimeZone = ({ endPoint }) => {
   const [isCopied, setIsCopied] = useState(false);
   const [state, setState] = useState();
   const [showExample, setShowExample] = useState(false);
   const [loading, setLoading] = useState();
 
+  // TODO Send Request to APi button
   const sendRequest = async () => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
       console.log(response);
 
-      await setState(response.data.phone);
+      await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
@@ -54,6 +54,7 @@ const EndPointPhone = ({ endPoint }) => {
       setIsCopied(false);
     }, 5000); // Remove "Copied!" after 10 seconds
   };
+
   return (
     <Card className="cardOfExample">
       <CardHeader
@@ -66,6 +67,7 @@ const EndPointPhone = ({ endPoint }) => {
         </Text>
         {isCopied ? (
           <Tooltip
+            hasArrow
             label="کپی شد!"
             defaultIsOpen
             closeDelay={900}
@@ -99,19 +101,21 @@ const EndPointPhone = ({ endPoint }) => {
           display={showExample ? "block" : "none"}
           listStyleType="none"
         >
-          <ListItem>
-            <pre className="preCode">
-              {state &&
-                state?.map(state => (
-                  <pre key={state.id}>
-                    {`phone:{
-  code: ${state.code}
-  id: ${state.id}
-}`}
-                  </pre>
-                ))}
-            </pre>
-          </ListItem>
+          <pre className="preCode">
+            {state && (
+              <pre className="preCode">
+                {`{
+                TimeZone:${state.TimeZone}
+                Capital:${state.Capital}, 
+                DialCode:${state.DialCode},
+            
+                  },
+                  {},
+                  {},...
+                  `}
+              </pre>
+            )}
+          </pre>
         </UnorderedList>
         <Divider />
         <Button
@@ -135,4 +139,4 @@ const EndPointPhone = ({ endPoint }) => {
   );
 };
 
-export default EndPointPhone;
+export default EndPointTimeZone;
