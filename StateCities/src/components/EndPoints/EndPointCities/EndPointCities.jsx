@@ -28,13 +28,13 @@ const EndpointCities = ({ endPoint }) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
-      console.log(response);
+      response;
 
       await setState(response.data.cities);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
-      console.log(error);
+      error;
     }
   };
 

@@ -26,7 +26,7 @@ const EndpointCities = ({ endPoint }) => {
         const response = await axios.get(endPoint);
         await setState(response.data.cities);
       } catch (error) {
-        console.log(error);
+        error;
       }
     };
     fetchStateData();

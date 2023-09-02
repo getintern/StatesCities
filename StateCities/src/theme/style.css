@@ -8,7 +8,6 @@
   padding-bottom: 10px;
 }
 
-
 .section {
   transition: 0.3s all ease-out;
   margin: 50px 0;
@@ -36,9 +35,9 @@
   .cardOfExample {
     width: unset !important;
   }
-.subText{
-  text-align: center;
-}
+  .subText {
+    text-align: center;
+  }
 }
 
 .liveExample {
@@ -75,7 +74,6 @@
   margin: 0 auto;
 }
 
-
 [data-theme="light"] .divider .css-svjswr {
   border-color: rgb(158, 158, 158) !important;
 }
@@ -96,9 +94,8 @@
   top: 0 !important;
 }
 
-.uni .css-kifvyh{
+.uni .css-kifvyh {
   width: 140px !important;
-
 }
 
 @media screen and (max-width: 768px) {
@@ -106,7 +103,7 @@
     width: 120px !important;
     right: 15% !important;
   }
-  .uni .css-kifvyh{
+  .uni .css-kifvyh {
     width: 140px !important;
     right: 7% !important;
   }
@@ -122,7 +119,7 @@
   line-height: 2.2;
 }
 strong {
-  padding: 0 3px;
+  padding: 0 6px;
 }
 
 .textApi {
@@ -209,6 +206,6 @@ strong {
   text-align: right !important;
 }
 
-.preCode .uni{
+.preCode .uni {
   overflow: scroll;
 }

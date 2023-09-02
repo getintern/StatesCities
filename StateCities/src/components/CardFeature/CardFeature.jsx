@@ -12,7 +12,7 @@ const CardFeature = () => {
     event.preventDefault(); // Prevent the default link behavior
     const targetId = event.currentTarget.getAttribute("href"); // Get the target id from the link's href attribute
     const targetElement = document.querySelector(targetId); // Find the target element by its id
-    console.log(targetElement);
+    targetElement;
 
     if (targetElement) {
       targetElement.nextElementSibling.classList.add("blur-section");
@@ -34,7 +34,8 @@ const CardFeature = () => {
           <div className={styled.info}>
             <div className={styled.sub}>استان ها</div>
             <div className={styled.title}>
-              می توانید به تمام استان های ایران و مشخصات جغرافیایی دسترسی داشته باشید
+              می توانید به تمام استان های ایران و مشخصات جغرافیایی دسترسی داشته
+              باشید
             </div>
             <a href="#states" onClick={handleScroll} className={styled.btn}>
               اطلاعات بیشتر

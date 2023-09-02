@@ -15,7 +15,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Clipboard2CheckFill, Clipboard2Fill } from "react-bootstrap-icons";
 
-const ExampleOfCountry = ({endPoint}) => {
+const ExampleOfCountry = ({ endPoint }) => {
   const [isCopied, setIsCopied] = useState(false);
   const [state, setState] = useState();
   const [showExample, setShowExample] = useState(false);
@@ -26,13 +26,13 @@ const ExampleOfCountry = ({endPoint}) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
-      console.log(response);
+      response;
 
       await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
-      console.log(error);
+      error;
     }
   };
 

@@ -26,11 +26,13 @@ const EndPointUni = ({ endPoint }) => {
     await setLoading(true);
     try {
       const response = await axios.get(endPoint);
+      response;
+
       await setState(response.data);
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
-      console.log(error);
+      error;
     }
   };
 
@@ -103,6 +105,7 @@ const EndPointUni = ({ endPoint }) => {
                 state?.slice(14, 15).map(state => (
                   <pre className="preCode" key={state.id}>
                     {`{
+                      NumberOfFaculties: ${state.NumberOfFaculties}
                       name:${state.name}
                       city:${state.city}
                       establishedYear:${state.establishedYear}

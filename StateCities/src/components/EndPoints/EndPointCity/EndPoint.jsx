@@ -27,7 +27,7 @@ const EndPoint = ({ endPoint }) => {
         const response = await axios.get(endPoint);
         await setState(response.data);
       } catch (error) {
-        console.log(error);
+        error;
       }
     };
     fetchStateData();

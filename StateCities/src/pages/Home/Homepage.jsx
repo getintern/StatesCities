@@ -122,7 +122,7 @@ setState(response.data); `}
                     language="javascript"
                     code={`fetch('https://api.getfreejson.ir/api/v1/states')
             .then(response => response.json())
-            .then(json => console.log(json)); `}
+            .then(json =>  (json)); `}
                   />
                 </TabPanel>
                 <TabPanel className="tabpanels">
@@ -236,7 +236,9 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong>نام دانشگاه های کشور و شهر و سال تاسیس</strong>
+              <strong>
+                نام دانشگاه های کشور و شهر و تعداد دانشکده ها و سال تاسیس
+              </strong>
               دانشگاه موردنظر را دریافت کنید
             </Text>
 
@@ -255,9 +257,9 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
             justifyContent="space-between"
           >
             <Text className="sectionText">
-              با درخواست به این API شما می توانید
-              <strong>نام دانشگاه های کشور و شهر و سال تاسیس</strong>
-              دانشگاه موردنظر را دریافت کنید
+              با درخواست به این API شما می توانید به
+              <strong>دما و نام کشور و شهر و آیکون </strong>
+              موردنظر را دریافت کنید
             </Text>
 
             <EndPointWeather endPoint="https://api.getfreejson.ir/api/v1/getweather?city=tehran" />

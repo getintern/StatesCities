@@ -29,7 +29,7 @@ const EndPointState = ({ endPoint }) => {
       await setShowExample(true);
       await setLoading(false);
     } catch (error) {
-      console.log(error);
+      error;
     }
   };
 
