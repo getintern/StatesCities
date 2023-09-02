@@ -102,17 +102,19 @@ const EndPointUni = ({ endPoint }) => {
           <ListItem>
             <pre className="preCode">
               {state &&
-                state?.slice(14, 15).map(state => (
+                state?.slice(0, 1).map(state => (
                   <pre className="preCode" key={state.id}>
-                    {`{
+                    {`
+                    0:{
                       NumberOfFaculties: ${state.NumberOfFaculties}
                       name:${state.name}
                       city:${state.city}
                       establishedYear:${state.establishedYear}
                       id:${state.id}
                   },
-                  {},
-                  {},...`}
+                  1:{},
+                  2:{},
+                  ...`}
                   </pre>
                 ))}
             </pre>

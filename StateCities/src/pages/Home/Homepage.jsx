@@ -72,14 +72,13 @@ const Homepage = () => {
         <Box className="section firstSection" as="section">
           <Flex
             className="innerCard"
-            flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong> لیست تمام استان ها و مرکز</strong>
-              <strong>استان</strong> را دریافت کنید
+              <h6> لیست تمام استان ها و مرکز</h6>
+              <h6>استان</h6> را دریافت کنید
             </Text>
             <Tabs className="tabs">
               <TabList justifyContent="space-between">
@@ -168,12 +167,12 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           <Flex
             className="innerCard"
             flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong>لیست تمام شهرهای</strong> استان مورد نظر را دریافت کنید
+              <h6>لیست تمام شهرهای</h6> استان مورد نظر را دریافت کنید
             </Text>
 
             <EndpointCities endPoint="https://api.getfreejson.ir/api/v1/cities?state=خوزستان" />
@@ -185,12 +184,12 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           <Flex
             className="innerCard"
             flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong> کد تلفن استان </strong>مورد نظر را دریافت کنید
+              <h6> کد تلفن استان </h6>مورد نظر را دریافت کنید
             </Text>
             <EndPointPhone endPoint="https://api.getfreejson.ir/api/v1/phoneCode?state=کرمان" />
           </Flex>
@@ -201,12 +200,12 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           <Flex
             className="innerCard"
             flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong>ساعت محلی و پایتخت و کد تلفن</strong>
+              <h6>ساعت محلی و پایتخت و کد تلفن</h6>
               کشور مورد نظر را دریافت کنید
             </Text>
             <EndPointTimeZone endPoint="https://api.getfreejson.ir/api/v1/timeZones?country=iran" />
@@ -231,14 +230,14 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           <Flex
             className="innerCard"
             flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید
-              <strong>
-                نام دانشگاه های کشور و شهر و تعداد دانشکده ها و سال تاسیس
-              </strong>
+              <h6>
+                نام دانشگاه های کشور و شهر و تعداد دانشکده ها و سال تاسیس{" "}
+              </h6>
               دانشگاه موردنظر را دریافت کنید
             </Text>
 
@@ -253,12 +252,12 @@ HttpResponse<String> httpResponse = httpClient.send(httpRequest, HttpResponse.Bo
           <Flex
             className="innerCard"
             flexDirection={{ base: "column", md: "row" }} // Change direction to column on mobile and row on larger screens
-            alignItems={{ base: "center", md: "flex-start" }}
+            alignItems="center"
             justifyContent="space-between"
           >
             <Text className="sectionText">
               با درخواست به این API شما می توانید به
-              <strong>دما و نام کشور و شهر و آیکون </strong>
+              <h6>دما و نام کشور و شهر و آیکون </h6>
               موردنظر را دریافت کنید
             </Text>
 

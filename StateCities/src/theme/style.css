@@ -115,10 +115,12 @@
   white-space: pre-line;
 }
 .sectionText {
-  max-width: 400px;
+  max-width: 480px;
   line-height: 2.2;
 }
-strong {
+h6 {
+  display: inline-block;
+  font-weight: bold;
   padding: 0 6px;
 }
 
